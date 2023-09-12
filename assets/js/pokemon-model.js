@@ -6,3 +6,11 @@ class Pokemon {
     types = [];
     photo;
 }
+
+class PokemonDetail {
+    number;
+    name;
+    type;
+    types = [];
+    photo;
+}
