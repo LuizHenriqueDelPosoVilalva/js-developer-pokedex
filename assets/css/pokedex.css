@@ -85,6 +85,7 @@
     padding: 1rem;
     border-radius: 1rem;
     cursor: pointer;
+    position: relative;
 }
 
 .pokemon .number {
@@ -150,15 +151,13 @@
 .pokemonDetail {
     width: 100%;
     height: 100%;
-    margin-bottom: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+    position: relative;
 }
 
 .pokemonDetail .pokemonDetailContent {
-    width: 90%;
+    width: 100%;
     height: 90%;
     border-radius: 10px;
     border: 3px solid black;
@@ -166,7 +165,13 @@
     flex-direction: column;
     justify-content: end;
     align-items: center;
-    position: relative;
+}
+
+.pokemonDetailContent .icon{
+    cursor: pointer;
+    position:absolute;
+    left: 2%;
+    top: 5%;
 }
 
 .pokemonDetailContent .name {
@@ -205,10 +210,7 @@
 }
 
 .pokemonAbout .pokemonAboutContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    text-align: center;
 }
 
 @media screen and (min-width: 380px) {

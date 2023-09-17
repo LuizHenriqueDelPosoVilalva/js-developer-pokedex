@@ -30,6 +30,7 @@ function pokeDetail(pokemon) {
     console.log("dados do pokemon: "+ pokemon)
     return `
         <div class="pokemonDetailContent ${pokemon.type}">
+        <img class= "icon"src="../../icon/back.svg" onclick="notShowPokemonDetail()">
         <h4 class="name">${pokemon.name}</h4>
         <div class="detail">
             <ol class="types">
@@ -54,9 +55,16 @@ function pokeDetail(pokemon) {
 }
 
 function showPokemonDetail (pokemon) {
-    console.log('Chamando showPokemonDetail com Pokémon:', pokemon);
+    console.log(pokemon)
+    const pokemonDetailsDiv = document.getElementById('pokemonDetails');
     const detailHtml = pokeDetail(pokemon);
-    pokemonDetails.innerHTML = detailHtml;
+    pokemonDetailsDiv.innerHTML = detailHtml;
+    pokemonDetailsDiv.style.display = 'block';
+}
+
+function notShowPokemonDetail() {
+    const pokemonDetailsDiv = document.getElementById('pokemonDetails')
+    pokemonDetailsDiv.style.display = 'none';
 }
 
 function loadPokemonItens(offset, limit) {
