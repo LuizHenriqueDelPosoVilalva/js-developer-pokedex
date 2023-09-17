@@ -27,29 +27,31 @@ function convertPokemonToLi(pokemon) {
 
 
 function pokeDetail(pokemon) {
-    console.log("dados do pokemon: "+ pokemon)
     return `
         <div class="pokemonDetailContent ${pokemon.type}">
-        <img class= "icon"src="../../icon/back.svg" onclick="notShowPokemonDetail()">
-        <h4 class="name">${pokemon.name}</h4>
-        <div class="detail">
-            <ol class="types">
-                ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-            </ol>
-    
-            <img src="${pokemon.photo}"
-                alt="${pokemon.name}">
-        </div>
-        <div class="pokemonAbout">
-            <h4 class="title">About</h5>
-            <div class="pokemonAboutContainer">
-                <p>Species: opa</p>
-                <p>Species: opa</p>
-                <p>Species: opa</p>
-                <p>Species: opa</p>
-                <p>Species: opa</p>
+            <img class= "icon"src="../../icon/back.svg" onclick="notShowPokemonDetail()">
+            <div class="pokemon">
+                <h4 class="name">${pokemon.name}</h4>
+                <div class="detail">
+                    <ol class="types">
+                        ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                    </ol>
+            
+                    <img src="${pokemon.photo}"
+                        alt="${pokemon.name}">
+                </div>
             </div>
-        </div>
+            <div class="pokemonAbout">
+                <h4 class="title">Mais detalhes do pokemon</h5>
+                <div class="pokemonAboutContainer">
+                    <div class="details">
+                        <p>Species: <span>${pokemon.species}</span></p>
+                        <p>Height: <span>${pokemon.height}</span></p>
+                        <p>Weight: <span>${pokemon.weight}</span></p>
+                        <p>Abilities: <span>${pokemon.abilities}</span></p>
+                    </div>
+                </div>
+            </div>
         </div> 
     `
 }

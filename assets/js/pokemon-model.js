@@ -5,12 +5,9 @@ class Pokemon {
     type;
     types = [];
     photo;
+    abilities;
+    weight;
+    species;
+    height;
 }
 
-class PokemonDetail {
-    number;
-    name;
-    type;
-    types = [];
-    photo;
-}
